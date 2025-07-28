@@ -1,0 +1,16 @@
+version: "3.8"
+services:
+  db:
+    image: postgres:14
+    container_name: apply_ai_db
+    environment:
+      POSTGRES_USER: apply_ai
+      POSTGRES_PASSWORD: apply_ai123
+      POSTGRES_DB: apply_ai
+    ports:
+      - "5433:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+volumes:
+  pgdata:
+
